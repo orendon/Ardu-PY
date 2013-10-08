@@ -34,7 +34,7 @@ int performAction()
 			case 1:
 				return digitalIn();
 			case 2:
-				return voltajeRead();
+				return voltageRead();
 			case 3:
 				return serPosition();
 			case 4:
@@ -103,7 +103,7 @@ int digitalIn() // Params={PIN} Return the value of the PIN
 	return -1;	// Invalid Pin
 }
 
-int voltajeRead() // Params={ADC} Return the value of the Analog Read
+int voltageRead() // Params={ADC} Return the value of the Analog Read
 {
 	if(len!=2)
 	{

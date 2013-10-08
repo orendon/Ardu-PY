@@ -33,7 +33,7 @@ class Arduino:
 			self.port.write(chr(i))
 		return self.__getReceivedData()
 
-	def voltajeRead(self,Pin):
+	def voltageRead(self,Pin):
 		self.port.flushOutput()
 		if Pin>self.maxADC:
 			print "The maximum ADC pin is",self.maxADC
@@ -50,7 +50,7 @@ class Arduino:
 		for i in command:
 			self.port.write(chr(i))
 		time.sleep(1)
-		return self.__getReceivedData()	
+		return self.__getReceivedData()
 
 	def PWM(self,Pin,Value):
 		if not self.__checkParameters(Pin,Value):
